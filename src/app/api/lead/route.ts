@@ -33,15 +33,22 @@ export async function POST(req: Request) {
   }
 
   try {
+    // Google Apps Script /exec returns 302; follow it manually with GET
     const res = await fetch(webhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
       cache: "no-store",
+      redirect: "manual",
     });
-    if (!res.ok) {
-      const text = await res.text().catch(() => "");
-      console.error("[lead] webhook non-2xx", res.status, text);
+    let finalRes = res;
+    if (res.status === 301 || res.status === 302) {
+      const location = res.headers.get("location");
+      if (location) finalRes = await fetch(location, { cache: "no-store" });
+    }
+    if (!finalRes.ok) {
+      const text = await finalRes.text().catch(() => "");
+      console.error("[lead] webhook non-2xx", finalRes.status, text);
       return NextResponse.json(
         { ok: false, error: "Could not save lead, please try WhatsApp" },
         { status: 502 },
