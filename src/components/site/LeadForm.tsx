@@ -17,6 +17,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { leadSchema, PROGRAMS, type LeadInput } from "@/lib/leadSchema";
 import { site } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
@@ -87,7 +88,7 @@ export function LeadForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
       <div className="grid gap-4 sm:grid-cols-2">
-        <Field label="Full name" error={errors.name?.message}>
+        <Field label="Full name *" error={errors.name?.message}>
           <Input
             {...register("name")}
             placeholder="Mehraj Bhat"
@@ -95,7 +96,7 @@ export function LeadForm() {
             aria-invalid={!!errors.name}
           />
         </Field>
-        <Field label="WhatsApp number" error={errors.phone?.message}>
+        <Field label="WhatsApp number *" error={errors.phone?.message}>
           <Input
             {...register("phone")}
             placeholder="+91 98xxx xxxxx"
@@ -104,7 +105,24 @@ export function LeadForm() {
             aria-invalid={!!errors.phone}
           />
         </Field>
-        <Field label="I'm interested in" error={errors.program?.message}>
+        <Field label="Email" error={errors.email?.message}>
+          <Input
+            {...register("email")}
+            placeholder="you@email.com"
+            inputMode="email"
+            autoComplete="email"
+            aria-invalid={!!errors.email}
+          />
+        </Field>
+        <Field label="NEET score" error={errors.neetScore?.message}>
+          <Input
+            {...register("neetScore")}
+            placeholder="e.g. 450"
+            inputMode="numeric"
+            aria-invalid={!!errors.neetScore}
+          />
+        </Field>
+        <Field label="I'm interested in *" error={errors.program?.message}>
           <Select
             value={program}
             onValueChange={(v) =>
@@ -125,12 +143,27 @@ export function LeadForm() {
             </SelectContent>
           </Select>
         </Field>
-        <Field label="Your city" error={errors.city?.message}>
+        <Field label="Your city *" error={errors.city?.message}>
           <Input
             {...register("city")}
             placeholder="Srinagar, Anantnag…"
             autoComplete="address-level2"
             aria-invalid={!!errors.city}
+          />
+        </Field>
+        <Field label="Preferred college" error={errors.preferredCollege?.message} className="sm:col-span-2">
+          <Input
+            {...register("preferredCollege")}
+            placeholder="e.g. Dhaka Community Medical College (optional)"
+            aria-invalid={!!errors.preferredCollege}
+          />
+        </Field>
+        <Field label="Message" error={errors.message?.message} className="sm:col-span-2">
+          <Textarea
+            {...register("message")}
+            placeholder="Any questions or specific requirements… (optional)"
+            rows={3}
+            aria-invalid={!!errors.message}
           />
         </Field>
       </div>
@@ -175,14 +208,16 @@ export function LeadForm() {
 function Field({
   label,
   error,
+  className,
   children,
 }: {
   label: string;
   error?: string;
+  className?: string;
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-1.5">
+    <div className={`space-y-1.5 ${className ?? ""}`}>
       <Label className="text-xs font-medium text-foreground/80">{label}</Label>
       {children}
       {error && (
