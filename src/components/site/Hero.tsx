@@ -42,7 +42,7 @@ export function Hero() {
               className="group rounded-full border-success/30 bg-success/5 text-success hover:bg-success/10 hover:text-success"
             >
               <MessageCircle className="mr-1.5 h-4 w-4" />
-              WhatsApp from Kashmir
+              WhatsApp
             </ButtonLink>
           </div>
 

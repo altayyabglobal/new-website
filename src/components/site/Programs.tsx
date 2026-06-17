@@ -62,7 +62,7 @@ export function Programs() {
 function ProgramSummary({ program }: { program: (typeof programs)[number] }) {
   const Icon = program.id === "mbbs" ? Stethoscope : GraduationCap;
   return (
-    <article className="flex flex-col rounded-3xl border border-border bg-card p-7 shadow-sm">
+    <article className="flex flex-col rounded-3xl border border-border bg-card p-5 shadow-sm sm:p-7">
       <div className="flex items-center gap-3">
         <div className="grid h-11 w-11 place-items-center rounded-xl bg-brand text-brand-foreground">
           <Icon className="h-5 w-5" />
@@ -151,40 +151,40 @@ function ProgramBlock({
         </a>
       </div>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
         {colleges.map((c) => (
           <article
             key={c.name}
-            className="group flex flex-col rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5"
+            className="group flex flex-col rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 sm:p-6"
           >
             <span className="inline-flex w-fit items-center gap-1 rounded-full bg-success/10 px-2.5 py-0.5 text-[11px] font-medium text-success">
               {c.badge}
             </span>
-            <h4 className="mt-3 font-semibold tracking-tight">{c.name}</h4>
-            <dl className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-brand" />
+            <h4 className="mt-2.5 font-semibold tracking-tight">{c.name}</h4>
+            <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm text-muted-foreground sm:grid-cols-1 sm:space-y-0">
+              <div className="flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-brand" />
                 <dt className="sr-only">City</dt>
                 <dd>{c.city}</dd>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4 text-brand" />
-                <dt className="sr-only">Seats / branches</dt>
+              <div className="flex items-center gap-1.5">
+                <Users className="h-3.5 w-3.5 shrink-0 text-brand" />
+                <dt className="sr-only">Seats</dt>
                 <dd>{c.seats}</dd>
               </div>
-              <div className="flex items-center gap-2">
-                <Wallet className="h-4 w-4 text-brand" />
+              <div className="col-span-2 flex items-center gap-1.5 sm:col-span-1">
+                <Wallet className="h-3.5 w-3.5 shrink-0 text-brand" />
                 <dt className="sr-only">Fees</dt>
-                <dd>{c.fees}</dd>
+                <dd className="font-medium text-foreground">{c.fees}</dd>
               </div>
             </dl>
             <a
               href={waLink(`Please share details on ${c.name} — fees, branches, seat status.`)}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand-deep"
+              className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand-deep"
             >
-              Ask about {c.name.split(" ")[0]}
+              Ask on WhatsApp
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </article>
