@@ -1,4 +1,7 @@
-import { ArrowUpRight, GraduationCap, MapPin, Stethoscope, Users, Wallet } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { ArrowUpRight, ChevronDown, GraduationCap, MapPin, Stethoscope, Users, Wallet } from "lucide-react";
 import {
   engineeringColleges,
   mbbsColleges,
@@ -124,6 +127,11 @@ function ProgramBlock({
   ctaMessage: string;
   ctaLabel: string;
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const PREVIEW = 3;
+  const visible = expanded ? colleges : colleges.slice(0, PREVIEW);
+  const hasMore = colleges.length > PREVIEW;
+
   return (
     <div id={id} className="mt-20 scroll-mt-20">
       <div className="flex flex-wrap items-end justify-between gap-4">
@@ -152,7 +160,7 @@ function ProgramBlock({
       </div>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-        {colleges.map((c) => (
+        {visible.map((c) => (
           <article
             key={c.name}
             className="group flex flex-col rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 sm:p-6"
@@ -190,6 +198,16 @@ function ProgramBlock({
           </article>
         ))}
       </div>
+
+      {hasMore && (
+        <button
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-border py-3 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand sm:hidden"
+        >
+          {expanded ? "Show less" : `See all ${colleges.length} colleges`}
+          <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
+        </button>
+      )}
     </div>
   );
 }
