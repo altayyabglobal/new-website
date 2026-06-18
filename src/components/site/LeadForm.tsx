@@ -57,7 +57,23 @@ export function LeadForm() {
       }
       setSubmitted(true);
       reset();
-      toast.success("Thanks! We'll WhatsApp you within 1 working hour.");
+
+      // Build personalised pre-filled WhatsApp message
+      const lines = [
+        `Hi, I'm ${data.name} from ${data.city}.`,
+        `I just filled the enquiry form on your website.`,
+        ``,
+        `📱 Phone: ${data.phone}`,
+        data.email ? `📧 Email: ${data.email}` : "",
+        data.neetScore ? `📊 NEET Score: ${data.neetScore}` : "",
+        `🎓 Interested in: ${data.program}`,
+        data.preferredCollege ? `🏫 Preferred college: ${data.preferredCollege}` : "",
+        data.message ? `💬 Message: ${data.message}` : "",
+        ``,
+        `Please get in touch when you're available.`,
+      ].filter(Boolean).join("\n");
+
+      window.open(waLink(lines), "_blank", "noopener,noreferrer");
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Something went wrong";
       toast.error(`${msg}. Please try WhatsApp.`);
@@ -68,18 +84,18 @@ export function LeadForm() {
     return (
       <div className="rounded-2xl border border-success/30 bg-success/5 p-8 text-center">
         <CheckCircle2 className="mx-auto h-10 w-10 text-success" />
-        <h3 className="mt-4 text-xl font-semibold">Application received</h3>
+        <h3 className="mt-4 text-xl font-semibold">Details saved!</h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          Our Srinagar team will WhatsApp you within 1 working hour.
+          WhatsApp opened with your details pre-filled — just hit Send.
         </p>
         <ButtonLink
-          href={waLink("Asalamu alaikum, I just submitted the form on your website.")}
+          href={waLink("Hi, I just submitted the enquiry form on your website.")}
           target="_blank"
           rel="noreferrer"
           className="mt-6 rounded-full"
         >
           <MessageCircle className="mr-1.5 h-4 w-4" />
-          Continue on WhatsApp
+          Open WhatsApp again
         </ButtonLink>
       </div>
     );
