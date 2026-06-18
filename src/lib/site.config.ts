@@ -6,10 +6,10 @@ export const site = {
   description:
     "Al-Tayyab Career Consultancy guides Kashmiri students into BMDC/UGC-approved MBBS and engineering colleges in Bangladesh. We only consult — your fees go directly to the college, never to us.",
   contact: {
-    phone: "+91 78894 20003",
-    phoneHref: "tel:+917889420003",
-    whatsapp: "+91 78894 20003",
-    whatsappNumber: "917889420003",
+    phone: "+91 98583 99483",
+    phoneHref: "tel:+919858399483",
+    whatsapp: "+91 98583 99483",
+    whatsappNumber: "919858399483",
     email: "admissions@altayyab.example.com",
     address: "Lal Chowk, Srinagar, Kashmir",
   },
