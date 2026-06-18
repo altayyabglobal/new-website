@@ -65,7 +65,6 @@ export function LeadForm() {
         ``,
         `📱 Phone: ${data.phone}`,
         data.email ? `📧 Email: ${data.email}` : "",
-        data.neetScore ? `📊 NEET Score: ${data.neetScore}` : "",
         `🎓 Interested in: ${data.program}`,
         data.preferredCollege ? `🏫 Preferred college: ${data.preferredCollege}` : "",
         data.message ? `💬 Message: ${data.message}` : "",
@@ -128,14 +127,6 @@ export function LeadForm() {
             inputMode="email"
             autoComplete="email"
             aria-invalid={!!errors.email}
-          />
-        </Field>
-        <Field label="NEET score" error={errors.neetScore?.message}>
-          <Input
-            {...register("neetScore")}
-            placeholder="e.g. 450"
-            inputMode="numeric"
-            aria-invalid={!!errors.neetScore}
           />
         </Field>
         <Field label="I'm interested in *" error={errors.program?.message}>
