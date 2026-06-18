@@ -37,8 +37,10 @@ export function LeadForm() {
     defaultValues: {
       name: "",
       phone: "",
+      email: "",
       program: "Not sure yet",
       city: "",
+      preferredCollege: "",
     },
   });
 
@@ -120,7 +122,7 @@ export function LeadForm() {
             aria-invalid={!!errors.phone}
           />
         </Field>
-        <Field label="Email" error={errors.email?.message}>
+        <Field label="Email *" error={errors.email?.message}>
           <Input
             {...register("email")}
             placeholder="you@email.com"
@@ -150,18 +152,18 @@ export function LeadForm() {
             </SelectContent>
           </Select>
         </Field>
-        <Field label="Your city *" error={errors.city?.message}>
+        <Field label="Your city" error={errors.city?.message}>
           <Input
             {...register("city")}
-            placeholder="Srinagar, Anantnag…"
+            placeholder="Hyderabad, Secunderabad…"
             autoComplete="address-level2"
             aria-invalid={!!errors.city}
           />
         </Field>
-        <Field label="Preferred college" error={errors.preferredCollege?.message} className="sm:col-span-2">
+        <Field label="Preferred college" error={errors.preferredCollege?.message}>
           <Input
             {...register("preferredCollege")}
-            placeholder="e.g. Dhaka Community Medical College (optional)"
+            placeholder="e.g. Dhaka CMC (optional)"
             aria-invalid={!!errors.preferredCollege}
           />
         </Field>

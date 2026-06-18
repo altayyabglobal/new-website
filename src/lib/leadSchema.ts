@@ -8,15 +8,9 @@ export const leadSchema = z.object({
     .string()
     .trim()
     .regex(/^[0-9+\-\s]{10,15}$/, "Enter a valid mobile number"),
-  email: z.string().trim().email("Enter a valid email").optional().or(z.literal("")),
-  neetScore: z
-    .string()
-    .trim()
-    .regex(/^\d{1,3}$/, "Enter your NEET score (0–720)")
-    .optional()
-    .or(z.literal("")),
+  email: z.string().trim().email("Enter a valid email"),
   program: z.enum(PROGRAMS, { message: "Pick a program" }),
-  city: z.string().trim().min(2, "Your city").max(60),
+  city: z.string().trim().max(60).optional().or(z.literal("")),
   preferredCollege: z.string().trim().max(120).optional().or(z.literal("")),
   message: z.string().trim().max(600).optional().or(z.literal("")),
 });
