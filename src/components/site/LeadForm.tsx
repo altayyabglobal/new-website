@@ -155,7 +155,7 @@ export function LeadForm() {
         <Field label="Your city" error={errors.city?.message}>
           <Input
             {...register("city")}
-            placeholder="Hyderabad, Secunderabad…"
+            placeholder="Srinagar, Anantnag…"
             autoComplete="address-level2"
             aria-invalid={!!errors.city}
           />
