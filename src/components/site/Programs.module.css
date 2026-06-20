@@ -1,0 +1,218 @@
+.overviewCard {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 50%, transparent);
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .overviewCard {
+    padding: 1.75rem;
+  }
+}
+
+.overviewHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.overviewIconWrap {
+  display: grid;
+  height: 2.5rem;
+  width: 2.5rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: var(--brand);
+  color: var(--brand-foreground);
+}
+
+.overviewGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .overviewGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.overviewBullets {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.375rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bulletDot {
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 9999px;
+  background: var(--brand);
+  flex-shrink: 0;
+}
+
+.collegesSection {
+  margin-top: 3rem;
+}
+
+.collegesHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.seeAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.seeAllLink:hover {
+  color: var(--brand-deep);
+}
+
+.cardGrid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 1rem;
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand) 40%, transparent);
+  box-shadow:
+    0 10px 15px -3px color-mix(in oklab, var(--brand) 5%, transparent),
+    0 4px 6px -4px color-mix(in oklab, var(--brand) 5%, transparent);
+}
+
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--success) 10%, transparent);
+  padding: 0.125rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--success);
+}
+
+.metaList {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.cardLink {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.cardLink:hover {
+  color: var(--brand-deep);
+}
+
+.cardLinkIcon {
+  transition: transform 150ms ease;
+}
+
+.card:hover .cardLinkIcon {
+  transform: translate(2px, -2px);
+}
+
+.viewAllWrap {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition:
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.viewAllBtn:hover {
+  border-color: color-mix(in oklab, var(--brand) 40%, transparent);
+  color: var(--brand);
+}

@@ -1,6 +1,7 @@
 import { ArrowUpRight, BedDouble, MapPin, Stethoscope, Wallet } from "lucide-react";
 import { mbbsColleges } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
+import styles from "./Programs.module.css";
 
 type College = {
   name: string;
@@ -29,9 +30,9 @@ export function Programs() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-2xl border border-border bg-card/50 p-5 sm:p-7">
-          <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand text-brand-foreground">
+        <div className={styles.overviewCard}>
+          <div className={styles.overviewHeader}>
+            <div className={styles.overviewIconWrap}>
               <Stethoscope className="h-5 w-5" />
             </div>
             <div>
@@ -39,7 +40,7 @@ export function Programs() {
               <p className="text-sm text-muted-foreground">Eligibility · Duration · Cost · Recognition</p>
             </div>
           </div>
-          <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-4 text-sm sm:grid-cols-4">
+          <dl className={styles.overviewGrid}>
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Eligibility</dt>
               <dd className="mt-1 font-medium">NEET qualified, 50%+ PCB</dd>
@@ -57,46 +58,40 @@ export function Programs() {
               <dd className="mt-1 font-medium">BMDC + India&apos;s NMC listed</dd>
             </div>
           </dl>
-          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-1.5 text-sm text-muted-foreground">
+          <ul className={styles.overviewBullets}>
             {["English medium, NMC-pattern syllabus", "FMGE/NEXT-ready curriculum", "Practice in India after FMGE/NEXT"].map((b) => (
-              <li key={b} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-brand" aria-hidden />
+              <li key={b} className={styles.bullet}>
+                <span className={styles.bulletDot} aria-hidden />
                 {b}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="mt-12">
-          <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className={styles.collegesSection}>
+          <div className={styles.collegesHeader}>
             <div>
               <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
                 MBBS colleges in Bangladesh
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
-                BMDC-approved, NMC-listed · <span className="font-medium text-foreground">₹31.6 L – ₹42.4 L</span> full course · Session 2026–27 · $1 = ₹94.33
+                BMDC-approved, NMC-listed · <span className="font-medium text-foreground">₹31–32 L – ₹42–43 L</span> full course · Session 2026–27 · $1 = ₹94.33
               </p>
             </div>
-            <a
-              href="/mbbs-colleges-in-bangladesh"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-deep"
-            >
+            <a href="/mbbs-colleges-in-bangladesh" className={styles.seeAllLink}>
               See all {mbbsColleges.length} colleges
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
 
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+          <div className={styles.cardGrid}>
             {visible.map((c) => (
               <CollegeCard key={c.name} college={c} />
             ))}
           </div>
 
-          <div className="mt-6 text-center">
-            <a
-              href="/mbbs-colleges-in-bangladesh"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
-            >
+          <div className={styles.viewAllWrap}>
+            <a href="/mbbs-colleges-in-bangladesh" className={styles.viewAllBtn}>
               View all colleges
               <ArrowUpRight className="h-4 w-4" />
             </a>
@@ -109,36 +104,34 @@ export function Programs() {
 
 function CollegeCard({ college: c }: { college: College }) {
   return (
-    <article className="group flex flex-col rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-lg hover:shadow-brand/5 sm:p-6">
-      <span className="inline-flex w-fit items-center gap-1 rounded-full bg-success/10 px-2.5 py-0.5 text-[11px] font-medium text-success">
-        {c.badge}
-      </span>
+    <article className={styles.card}>
+      <span className={styles.badge}>{c.badge}</span>
       <h4 className="mt-2.5 font-semibold tracking-tight">{c.name}</h4>
-      <dl className="mt-3 space-y-2 text-sm text-muted-foreground">
-        <div className="flex items-center gap-1.5">
+      <dl className={styles.metaList}>
+        <div className={styles.metaRow}>
           <MapPin className="h-3.5 w-3.5 shrink-0 text-brand" />
           <dt className="sr-only">City</dt>
           <dd>{c.city}</dd>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className={styles.metaRow}>
           <Wallet className="h-3.5 w-3.5 shrink-0 text-brand" />
           <dt className="sr-only">Fees</dt>
           <dd className="font-medium text-foreground">{c.feesINR}</dd>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className={styles.metaRow}>
           <BedDouble className="h-3.5 w-3.5 shrink-0 text-brand" />
           <dt className="sr-only">Hostel</dt>
-          <dd>{"Hostel charges may be extra"}</dd>
+          <dd>Hostel charges may be extra</dd>
         </div>
       </dl>
       <a
         href={waLink(`Please share details on ${c.name} — fees, seat availability, and hostel.`)}
         target="_blank"
         rel="noreferrer"
-        className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand-deep"
+        className={styles.cardLink}
       >
         Ask on WhatsApp
-        <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        <ArrowUpRight className={`h-4 w-4 ${styles.cardLinkIcon}`} />
       </a>
     </article>
   );
