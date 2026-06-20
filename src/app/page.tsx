@@ -24,7 +24,7 @@ export default function Home() {
         <Programs />
         <WhyBangladesh />
         <Process />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FAQ />
         <ApplySection />
       </main>

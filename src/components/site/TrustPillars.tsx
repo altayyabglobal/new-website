@@ -19,13 +19,13 @@ export function TrustPillars() {
             no third-party in your transaction.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-3">
           {trustPillars.map((p, i) => {
             const Icon = icons[i % icons.length];
             return (
               <div
                 key={p.title}
-                className="rounded-2xl border border-border bg-card p-5"
+                className="rounded-2xl border border-border bg-card p-7"
               >
                 <div className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-brand-foreground">
                   <Icon className="h-4 w-4" />

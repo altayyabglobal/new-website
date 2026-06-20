@@ -1,23 +1,19 @@
-"use client";
-
-import { useState } from "react";
-import { ArrowUpRight, ChevronDown, MapPin, Stethoscope, Users, Wallet } from "lucide-react";
+import { ArrowUpRight, BedDouble, MapPin, Stethoscope, Wallet } from "lucide-react";
 import { mbbsColleges } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
 
 type College = {
   name: string;
   city: string;
-  seats: string;
-  fees: string;
+  feesUSD: string;
+  feesINR: string;
+  hostel: string;
   badge: string;
 };
 
 export function Programs() {
-  const [expanded, setExpanded] = useState(false);
-  const PREVIEW = 3;
-  const visible = expanded ? mbbsColleges : mbbsColleges.slice(0, PREVIEW);
-  const hasMore = mbbsColleges.length > PREVIEW;
+  const PREVIEW = 6;
+  const visible = mbbsColleges.slice(0, PREVIEW);
 
   return (
     <section id="programs" className="section-pad">
@@ -25,7 +21,7 @@ export function Programs() {
         <div className="max-w-2xl">
           <span className="eyebrow">MBBS in Bangladesh</span>
           <h2 className="heading-2 mt-3">
-            BMDC-approved colleges — fees paid direct to the college, never to us.
+            BMDC-approved colleges — fees paid direct to the college.
           </h2>
           <p className="lead mt-4">
             Every college we work with is BMDC-approved and NMC-listed. You speak directly
@@ -54,7 +50,7 @@ export function Programs() {
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Total cost</dt>
-              <dd className="mt-1 font-medium">₹25–35 L (entire course)</dd>
+              <dd className="mt-1 font-medium">₹30–35 L (entire course)</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-wide text-muted-foreground">Recognition</dt>
@@ -78,16 +74,14 @@ export function Programs() {
                 MBBS colleges in Bangladesh
               </h3>
               <p className="mt-1 text-sm text-muted-foreground">
-                BMDC-approved, NMC-listed. Fees shown are for the full 5-year program.
+                BMDC-approved, NMC-listed · <span className="font-medium text-foreground">₹31.6 L – ₹42.4 L</span> full course · Session 2026–27 · $1 = ₹94.33
               </p>
             </div>
             <a
-              href={waLink("Please send me the full BMDC MBBS college list with fees and seat availability.")}
-              target="_blank"
-              rel="noreferrer"
+              href="/mbbs-colleges-in-bangladesh"
               className="inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:text-brand-deep"
             >
-              See all MBBS colleges
+              See all {mbbsColleges.length} colleges
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
@@ -98,15 +92,15 @@ export function Programs() {
             ))}
           </div>
 
-          {hasMore && (
-            <button
-              onClick={() => setExpanded((v) => !v)}
-              className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl border border-border py-3 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand sm:hidden"
+          <div className="mt-6 text-center">
+            <a
+              href="/mbbs-colleges-in-bangladesh"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
             >
-              {expanded ? "Show less" : `See all ${mbbsColleges.length} colleges`}
-              <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
-            </button>
-          )}
+              View all colleges
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -120,21 +114,21 @@ function CollegeCard({ college: c }: { college: College }) {
         {c.badge}
       </span>
       <h4 className="mt-2.5 font-semibold tracking-tight">{c.name}</h4>
-      <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-sm text-muted-foreground sm:grid-cols-1 sm:space-y-0">
+      <dl className="mt-3 space-y-2 text-sm text-muted-foreground">
         <div className="flex items-center gap-1.5">
           <MapPin className="h-3.5 w-3.5 shrink-0 text-brand" />
           <dt className="sr-only">City</dt>
           <dd>{c.city}</dd>
         </div>
         <div className="flex items-center gap-1.5">
-          <Users className="h-3.5 w-3.5 shrink-0 text-brand" />
-          <dt className="sr-only">Seats</dt>
-          <dd>{c.seats}</dd>
-        </div>
-        <div className="col-span-2 flex items-center gap-1.5 sm:col-span-1">
           <Wallet className="h-3.5 w-3.5 shrink-0 text-brand" />
           <dt className="sr-only">Fees</dt>
-          <dd className="font-medium text-foreground">{c.fees}</dd>
+          <dd className="font-medium text-foreground">{c.feesINR}</dd>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <BedDouble className="h-3.5 w-3.5 shrink-0 text-brand" />
+          <dt className="sr-only">Hostel</dt>
+          <dd>{"Hostel charges may be extra"}</dd>
         </div>
       </dl>
       <a

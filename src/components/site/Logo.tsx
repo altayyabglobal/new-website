@@ -3,7 +3,7 @@ import { site } from "@/lib/site.config";
 
 export function Logo({ className = "", size = "default" }: { className?: string; size?: "default" | "large" }) {
   return (
-    <a href="#top" className={`inline-flex items-center ${className}`}>
+    <a href="/" className={`inline-flex items-center ${className}`}>
       <Image
         src="/logo.png"
         alt={site.name}

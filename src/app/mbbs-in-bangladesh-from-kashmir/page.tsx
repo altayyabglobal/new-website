@@ -9,14 +9,14 @@ import { waLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "MBBS in Bangladesh from Kashmir — Complete Guide 2026",
   description:
-    "Complete guide to MBBS in Bangladesh for Kashmiri students. NMC-approved, BMDC colleges, total cost ₹25–35 L, FMGE/NEXT eligibility, safety, and direct admission process. No agent fees.",
+    "Complete guide to MBBS in Bangladesh for Kashmiri students. NMC-approved, BMDC colleges, total cost ₹30–35 L, FMGE/NEXT eligibility, safety, and direct admission process. No agent fees.",
   alternates: {
     canonical: `https://www.${site.domain}/mbbs-in-bangladesh-from-kashmir`,
   },
   openGraph: {
     title: "MBBS in Bangladesh from Kashmir — Complete Guide 2026",
     description:
-      "NMC-approved MBBS in Bangladesh for Kashmiri students. Total cost ₹25–35 L. Direct college payment. 650+ students placed.",
+      "NMC-approved MBBS in Bangladesh for Kashmiri students. Total cost ₹30–35 L. Direct college payment. 650+ students placed.",
     url: `https://www.${site.domain}/mbbs-in-bangladesh-from-kashmir`,
   },
 };
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "What is the total cost of MBBS in Bangladesh?",
-    a: "The total fee for a 5-year MBBS program at BMDC-approved colleges ranges from ₹25 L to ₹35 L depending on the college. This covers tuition for all 5 years. Living costs (hostel + food) add approximately ₹4,000–6,000 per month. There are no agent fees — you pay the college directly.",
+    a: "The total fee for a 5-year MBBS program at BMDC-approved colleges ranges from ₹30 L to ₹35 L depending on the college. This covers tuition for all 5 years. Living costs (hostel + food) add approximately ₹4,000–6,000 per month. There are no agent fees — you pay the college directly.",
   },
   {
     q: "Is Bangladesh safe for Kashmiri students?",
@@ -136,7 +136,7 @@ export default function MbbsBangladeshPage() {
             <h2 className="heading-2">At a glance</h2>
             <dl className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { label: "Total cost", value: "₹25–35 L", note: "Full 5-year program" },
+                { label: "Total cost", value: "₹30–35 L", note: "Full 5-year program" },
                 { label: "Duration", value: "5 + 1 yr", note: "Degree + internship" },
                 { label: "Recognition", value: "BMDC + NMC", note: "Valid in India via FMGE/NEXT" },
                 { label: "NEET required", value: "Yes", note: "50%+ in PCB, valid score" },
@@ -160,9 +160,9 @@ export default function MbbsBangladeshPage() {
                 Bangladesh has become the most popular destination for MBBS abroad among Kashmiri students — and for good reason. The combination of affordable fees, English-medium instruction, NMC-listed colleges, and cultural familiarity makes it the closest thing to studying medicine in India, at a fraction of the cost.
               </p>
 
-              <h3 className="text-lg font-semibold text-foreground">1. Cost — ₹25–35 L for the entire degree</h3>
+              <h3 className="text-lg font-semibold text-foreground">1. Cost — ₹30–35 L for the entire degree</h3>
               <p>
-                Indian private medical colleges charge ₹70 L to ₹1.5 Cr for management-quota MBBS seats. Bangladesh BMDC-approved colleges charge ₹25–35 L for the complete 5-year program. This is not a per-year fee — it is the total cost for the entire degree. Living costs in Dhaka add approximately ₹4,000–6,000 per month, which is comparable to Jammu or Delhi.
+                Indian private medical colleges charge ₹70 L to ₹1.5 Cr for management-quota MBBS seats. Bangladesh BMDC-approved colleges charge ₹30–35 L for the complete 5-year program. This is not a per-year fee — it is the total cost for the entire degree. Living costs in Dhaka add approximately ₹4,000–6,000 per month, which is comparable to Jammu or Delhi.
               </p>
 
               <h3 className="text-lg font-semibold text-foreground">2. The degree is valid in India</h3>

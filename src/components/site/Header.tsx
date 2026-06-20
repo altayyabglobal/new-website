@@ -7,10 +7,10 @@ import { site } from "@/lib/site.config";
 import { ButtonLink } from "@/components/ui/button-link";
 
 const nav = [
-  { href: "#programs", label: "MBBS Colleges" },
-  { href: "#why", label: "Why Bangladesh" },
-  { href: "#process", label: "Process" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#programs", label: "MBBS Colleges" },
+  { href: "/#why", label: "Why Bangladesh" },
+  { href: "/#process", label: "Process" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function Header() {
@@ -52,7 +52,7 @@ export function Header() {
             <Phone className="h-3.5 w-3.5" />
             {site.contact.phone}
           </a>
-          <ButtonLink href="#apply-form" size="sm" className="rounded-full">
+          <ButtonLink href="/#apply-form" size="sm" className="rounded-full">
             Apply now
           </ButtonLink>
         </div>

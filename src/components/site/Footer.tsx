@@ -44,6 +44,11 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a href="/mbbs-colleges-in-bangladesh" className="hover:text-foreground">
+                All MBBS colleges &amp; fees
+              </a>
+            </li>
+            <li>
               <a href="/mbbs-in-bangladesh-from-kashmir" className="hover:text-foreground">
                 MBBS in Bangladesh guide
               </a>
@@ -61,6 +66,15 @@ export function Footer() {
               >
                 <Phone className="h-4 w-4 text-brand" />
                 {site.contact.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={site.contact.phone2Href}
+                className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <Phone className="h-4 w-4 text-brand" />
+                {site.contact.phone2}
               </a>
             </li>
             <li>

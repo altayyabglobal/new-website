@@ -12,7 +12,7 @@ export function ApplySection() {
             <div className="lg:col-span-7">
               <span className="eyebrow">Ready when you are</span>
               <h2 className="heading-2 mt-3 text-balance">
-                Free eligibility check &mdash; reply on WhatsApp from Srinagar within 1 hour.
+                Free eligibility check &mdash; reply on WhatsApp within 1 hour.
               </h2>
               <p className="lead mt-4 max-w-xl">
                 Send your details once. We come back with college options, real
@@ -43,7 +43,7 @@ export function ApplySection() {
               <li className="flex items-start gap-3 rounded-2xl border border-border bg-card/80 p-4">
                 <Clock className="mt-0.5 h-5 w-5 shrink-0 text-brand" />
                 <div>
-                  <p className="font-medium">Under 1-hour reply from Srinagar</p>
+                  <p className="font-medium">Under 1-hour reply</p>
                   <p className="text-muted-foreground">{site.hours}</p>
                 </div>
               </li>

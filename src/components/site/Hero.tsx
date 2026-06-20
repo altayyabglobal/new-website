@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, BadgeCheck, Sparkles, HandCoins } from "lucide-react";
+import { ArrowRight, ShieldCheck, HandCoins } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { site } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
@@ -19,13 +19,12 @@ export function Hero() {
           </span>
 
           <h1 className="heading-1 mt-5">
-            <span className="text-brand">MBBS in Bangladesh</span> — straight
-            from Kashmir, no middleman.
+            <span className="text-brand">MBBS in Bangladesh</span> direct from Kashmir.
           </h1>
 
           <p className="lead mt-5 max-w-xl">
-            650+ Kashmiri students placed. You pay the college directly. We
-            only guide — no agent fees, no donation, no surprise charges.
+            You pay the college directly. We only guide — no agent fees, no
+            donation, no surprise charges.
           </p>
 
           <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -55,12 +54,6 @@ export function Hero() {
             <li className="inline-flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 text-brand" /> BMDC + NMC approved colleges
             </li>
-            <li className="inline-flex items-center gap-2">
-              <BadgeCheck className="h-4 w-4 text-brand" /> Direct call with admission officer
-            </li>
-            <li className="inline-flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-brand" /> 9+ years guiding from Kashmir
-            </li>
           </ul>
         </div>
 
@@ -77,7 +70,7 @@ export function Hero() {
                 Free eligibility check
               </h2>
               <p className="mt-1.5 text-sm text-muted-foreground">
-                Send your details — we reply on WhatsApp from Srinagar within 1 hour.
+                Send your details — we reply on WhatsApp within 1 hour.
               </p>
             </div>
             <LeadForm />
