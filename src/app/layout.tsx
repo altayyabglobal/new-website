@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `https://www.${site.domain}`,
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: `Al-Tayyab Consultants — MBBS in Bangladesh from Kashmir`,
     description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,

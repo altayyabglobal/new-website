@@ -10,10 +10,12 @@ import { FAQ } from "@/components/site/FAQ";
 import { ApplySection } from "@/components/site/ApplySection";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { JsonLd } from "@/components/site/JsonLd";
 
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Header />
       <main>
         <Hero />

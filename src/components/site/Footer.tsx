@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-border bg-card/40">
       <div className="container-wide grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <Logo />
+          <Logo size="large" />
           <p className="mt-4 max-w-sm text-sm text-muted-foreground">
             {site.description}
           </p>
@@ -41,6 +41,11 @@ export function Footer() {
             <li>
               <a href="#apply" className="hover:text-foreground">
                 Apply now
+              </a>
+            </li>
+            <li>
+              <a href="/mbbs-in-bangladesh-from-kashmir" className="hover:text-foreground">
+                MBBS in Bangladesh guide
               </a>
             </li>
           </ul>
