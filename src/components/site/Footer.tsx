@@ -96,9 +96,6 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>
-            Guidance only — your fees go directly to the college, never to us.
-          </p>
         </div>
       </div>
     </footer>
