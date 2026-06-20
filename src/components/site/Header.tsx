@@ -7,7 +7,7 @@ import { site } from "@/lib/site.config";
 import { ButtonLink } from "@/components/ui/button-link";
 
 const nav = [
-  { href: "#programs", label: "MBBS & Engineering" },
+  { href: "#programs", label: "MBBS Colleges" },
   { href: "#why", label: "Why Bangladesh" },
   { href: "#process", label: "Process" },
   { href: "#faq", label: "FAQ" },

@@ -19,8 +19,8 @@ export function Hero() {
           </span>
 
           <h1 className="heading-1 mt-5">
-            <span className="text-brand">MBBS &amp; Engineering</span> in
-            Bangladesh — straight from Kashmir, no middleman.
+            <span className="text-brand">MBBS in Bangladesh</span> — straight
+            from Kashmir, no middleman.
           </h1>
 
           <p className="lead mt-5 max-w-xl">
@@ -34,7 +34,7 @@ export function Hero() {
               <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </ButtonLink>
             <ButtonLink
-              href={waLink("Asalamu alaikum, I'd like to know about MBBS / Engineering in Bangladesh.")}
+              href={waLink("Asalamu alaikum, I'd like to know about MBBS in Bangladesh.")}
               target="_blank"
               rel="noreferrer"
               size="lg"
@@ -53,7 +53,7 @@ export function Hero() {
               <HandCoins className="h-4 w-4 text-brand" /> Pay college directly — never us
             </li>
             <li className="inline-flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-brand" /> BMDC + UGC + NMC approved
+              <ShieldCheck className="h-4 w-4 text-brand" /> BMDC + NMC approved colleges
             </li>
             <li className="inline-flex items-center gap-2">
               <BadgeCheck className="h-4 w-4 text-brand" /> Direct call with admission officer

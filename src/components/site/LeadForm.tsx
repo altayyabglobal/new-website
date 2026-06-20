@@ -10,15 +10,8 @@ import { Button } from "@/components/ui/button";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { leadSchema, PROGRAMS, type LeadInput } from "@/lib/leadSchema";
+import { leadSchema, type LeadInput } from "@/lib/leadSchema";
 import { site } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
 
@@ -28,8 +21,6 @@ export function LeadForm() {
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<LeadInput>({
@@ -38,20 +29,17 @@ export function LeadForm() {
       name: "",
       phone: "",
       email: "",
-      program: "Not sure yet",
       city: "",
       preferredCollege: "",
     },
   });
-
-  const program = watch("program");
 
   async function onSubmit(data: LeadInput) {
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, program: "MBBS" }),
       });
       const json = await res.json().catch(() => ({}));
       if (!res.ok || !json?.ok) {
@@ -60,14 +48,12 @@ export function LeadForm() {
       setSubmitted(true);
       reset();
 
-      // Build personalised pre-filled WhatsApp message
       const lines = [
-        `Hi, I'm ${data.name} from ${data.city}.`,
-        `I just filled the enquiry form on your website.`,
+        `Hi, I'm ${data.name} from ${data.city || "Kashmir"}.`,
+        `I just filled the MBBS enquiry form on your website.`,
         ``,
         `📱 Phone: ${data.phone}`,
         data.email ? `📧 Email: ${data.email}` : "",
-        `🎓 Interested in: ${data.program}`,
         data.preferredCollege ? `🏫 Preferred college: ${data.preferredCollege}` : "",
         data.message ? `💬 Message: ${data.message}` : "",
         ``,
@@ -90,7 +76,7 @@ export function LeadForm() {
           WhatsApp opened with your details pre-filled — just hit Send.
         </p>
         <ButtonLink
-          href={waLink("Hi, I just submitted the enquiry form on your website.")}
+          href={waLink("Hi, I just submitted the MBBS enquiry form on your website.")}
           target="_blank"
           rel="noreferrer"
           className="mt-6 rounded-full"
@@ -131,27 +117,6 @@ export function LeadForm() {
             aria-invalid={!!errors.email}
           />
         </Field>
-        <Field label="I'm interested in *" error={errors.program?.message}>
-          <Select
-            value={program}
-            onValueChange={(v) =>
-              setValue("program", v as LeadInput["program"], {
-                shouldValidate: true,
-              })
-            }
-          >
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="MBBS / Engineering / Not sure" />
-            </SelectTrigger>
-            <SelectContent>
-              {PROGRAMS.map((p) => (
-                <SelectItem key={p} value={p}>
-                  {p}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </Field>
         <Field label="Your city" error={errors.city?.message}>
           <Input
             {...register("city")}
@@ -160,7 +125,7 @@ export function LeadForm() {
             aria-invalid={!!errors.city}
           />
         </Field>
-        <Field label="Preferred college" error={errors.preferredCollege?.message}>
+        <Field label="Preferred college" error={errors.preferredCollege?.message} className="sm:col-span-2">
           <Input
             {...register("preferredCollege")}
             placeholder="e.g. Dhaka CMC (optional)"
@@ -180,7 +145,7 @@ export function LeadForm() {
       <div className="flex flex-col gap-3">
         <div className="grid grid-cols-2 gap-3">
           <ButtonLink
-            href={waLink("Asalamu alaikum, I'd like to apply for MBBS / Engineering in Bangladesh.")}
+            href={waLink("Asalamu alaikum, I'd like to apply for MBBS in Bangladesh.")}
             target="_blank"
             rel="noreferrer"
             size="lg"
@@ -211,7 +176,7 @@ export function LeadForm() {
 
       <p className="text-[11px] leading-relaxed text-muted-foreground">
         By submitting, you agree to be contacted by {site.name} via call,
-        WhatsApp or email regarding your admission enquiry.
+        WhatsApp or email regarding your MBBS admission enquiry.
       </p>
     </form>
   );

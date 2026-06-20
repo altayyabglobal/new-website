@@ -25,7 +25,7 @@ export function Footer() {
             </li>
             <li>
               <a href="#programs" className="hover:text-foreground">
-                MBBS &amp; Engineering colleges
+                MBBS colleges in Bangladesh
               </a>
             </li>
             <li>
@@ -60,7 +60,7 @@ export function Footer() {
             </li>
             <li>
               <a
-                href={waLink("Asalamu alaikum, I'd like to know more about MBBS / Engineering in Bangladesh.")}
+                href={waLink("Asalamu alaikum, I'd like to know more about MBBS in Bangladesh.")}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground"
@@ -92,8 +92,7 @@ export function Footer() {
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
           <p>
-            Placeholder content for demonstration. Replace company details before
-            launch.
+            Guidance only — your fees go directly to the college, never to us.
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import styles from "./WhatsAppFab.module.css";
 export function WhatsAppFab() {
   return (
     <a
-      href={waLink("Asalamu alaikum, I'd like to know about MBBS / Engineering in Bangladesh.")}
+      href={waLink("Asalamu alaikum, I'd like to know about MBBS in Bangladesh.")}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"

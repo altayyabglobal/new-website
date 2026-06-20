@@ -26,7 +26,7 @@ export function ApplySection() {
                   Fill the form above
                 </ButtonLink>
                 <ButtonLink
-                  href={waLink("Asalamu alaikum, I'd like to discuss MBBS / Engineering in Bangladesh.")}
+                  href={waLink("Asalamu alaikum, I'd like to discuss MBBS in Bangladesh.")}
                   target="_blank"
                   rel="noreferrer"
                   size="lg"

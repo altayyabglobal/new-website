@@ -13,8 +13,8 @@ export function WhyBangladesh() {
             Why so many Kashmiri students pick Bangladesh.
           </h2>
           <p className="lead mt-4">
-            Affordable. Close to home. English medium. Degree valid in India.
-            The same logic that holds for MBBS holds for engineering.
+            Affordable. Close to home. English medium. NMC-listed degree valid in India.
+            Here is why Kashmiri students keep choosing Bangladesh for MBBS.
           </p>
         </div>
 

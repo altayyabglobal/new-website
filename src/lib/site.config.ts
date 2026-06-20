@@ -1,17 +1,17 @@
 export const site = {
-  name: "Al-Tayyab Career Consultancy",
+  name: "Al-Tayyab Global Consultants",
   shortName: "Al-Tayyab",
-  tagline: "Kashmir's trusted route to MBBS & Engineering in Bangladesh.",
-  domain: "altayyab.example.com",
+  tagline: "Kashmir's most trusted MBBS consultancy for Bangladesh.",
+  domain: "altayyabglobalconsultants.com",
   description:
-    "Al-Tayyab Career Consultancy guides Kashmiri students into BMDC/UGC-approved MBBS and engineering colleges in Bangladesh. We only consult — your fees go directly to the college, never to us.",
+    "Al-Tayyab Global Consultants guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — your fees go directly to the college, never to us.",
   contact: {
     phone: "+91 98583 99483",
     phoneHref: "tel:+919858399483",
     whatsapp: "+91 98583 99483",
     whatsappNumber: "919858399483",
-    email: "admissions@altayyab.example.com",
-    address: "Lal Chowk, Srinagar, Kashmir",
+    email: "admissions@altayyabglobalconsultants.com",
+    address: "4G Spot Bagh-I-Nund Singh Chattabal, opposite Tatoo Ground, near Petrol Pump, Srinagar, Jammu and Kashmir 190009",
   },
   hours: "Mon–Sat · 10:00 AM – 7:30 PM",
   countryFocus: "Bangladesh",
@@ -39,7 +39,7 @@ export const trustPillars = [
   },
   {
     title: "We've done this for years",
-    body: "Kashmiri students placed in Bangladesh across MBBS and engineering. Real students, reachable on WhatsApp for reference.",
+    body: "650+ Kashmiri students placed for MBBS in Bangladesh. Real students, reachable on WhatsApp for reference.",
   },
 ] as const;
 
@@ -63,20 +63,6 @@ export const programs = [
       "English medium, NMC-pattern syllabus",
       "FMGE/NEXT-ready curriculum",
       "Practice in India after FMGE/NEXT",
-    ],
-  },
-  {
-    id: "engineering",
-    name: "Engineering in Bangladesh",
-    short: "Engineering",
-    eligibility: "JEE not mandatory · 60%+ in PCM (12th)",
-    duration: "4 years (B.Sc. Engineering)",
-    totalCost: "₹8–14 L (entire course)",
-    recognition: "UGC Bangladesh + BAETE accredited",
-    benefits: [
-      "CSE, EEE, Civil, Mechanical, Architecture",
-      "AICTE-equivalent degree, valid in India",
-      "Active campus placements + internships",
     ],
   },
 ] as const;
@@ -126,59 +112,14 @@ export const mbbsColleges = [
   },
 ] as const;
 
-export const engineeringColleges = [
-  {
-    name: "Ahsanullah University of Science & Tech",
-    city: "Dhaka",
-    seats: "CSE, EEE, Civil",
-    fees: "₹10–12 L total",
-    badge: "BAETE accredited",
-  },
-  {
-    name: "BRAC University",
-    city: "Dhaka",
-    seats: "CSE, EEE, BBA",
-    fees: "₹12–14 L total",
-    badge: "Top private university",
-  },
-  {
-    name: "North South University",
-    city: "Dhaka",
-    seats: "CSE, EEE, Architecture",
-    fees: "₹13–15 L total",
-    badge: "Ranked #1 private (BD)",
-  },
-  {
-    name: "Independent University Bangladesh",
-    city: "Dhaka",
-    seats: "CSE, EEE, Civil",
-    fees: "₹11–13 L total",
-    badge: "Strong placement record",
-  },
-  {
-    name: "Daffodil International University",
-    city: "Dhaka",
-    seats: "CSE, EEE, SWE",
-    fees: "₹8–10 L total",
-    badge: "Most affordable",
-  },
-  {
-    name: "American International Univ. — BD",
-    city: "Dhaka",
-    seats: "CSE, EEE, Architecture",
-    fees: "₹12–14 L total",
-    badge: "US-curriculum aligned",
-  },
-] as const;
-
 export const whyBangladesh = [
   {
-    title: "Cost: ₹8–35 L total",
-    body: "Engineering from ₹8 L. MBBS from ₹25 L — fraction of Indian private/management quota for both.",
+    title: "Cost: ₹25–35 L total",
+    body: "MBBS from ₹25 L — a fraction of Indian private/management quota. Quality BMDC-approved education without the financial burden.",
   },
   {
     title: "Degree valid in India",
-    body: "MBBS via FMGE/NEXT. Engineering recognised by AICTE-equivalent process. Both routes are well-trodden.",
+    body: "MBBS via FMGE/NEXT. Your degree is NMC-listed — the recognised path to practise medicine in India. A well-trodden route taken by thousands of Indian graduates.",
   },
   {
     title: "Close to Kashmir",
@@ -194,7 +135,7 @@ export const whyBangladesh = [
   },
   {
     title: "Direct admission process",
-    body: "No Bangladesh entrance exam for the colleges we partner with. Your 12th + NEET/eligibility marks are enough.",
+    body: "No Bangladesh entrance exam for the colleges we partner with. Your 12th marks + NEET score are enough to apply.",
   },
 ] as const;
 
@@ -202,7 +143,7 @@ export const process = [
   {
     step: "01",
     title: "Free Kashmir consultation",
-    body: "Walk into our Srinagar office or talk on WhatsApp. We assess your 12th marks, NEET/JEE score, and budget — and tell you honestly what's possible.",
+    body: "Walk into our Srinagar office or talk on WhatsApp. We assess your 12th marks, NEET score, and budget — and tell you honestly what's possible.",
   },
   {
     step: "02",
@@ -229,16 +170,16 @@ export const testimonials = [
       "Indian private colleges quoted ₹1 Cr+ for MBBS. Al-Tayyab put me direct on call with Dhaka CMC. I paid the college account directly — no agent fees. Cleared FMGE last attempt.",
   },
   {
-    name: "Insha Jan",
-    location: "Srinagar → NSU (CSE Engineering)",
+    name: "Sana Mir",
+    location: "Shopian → Holy Family Red Crescent MC (MBBS)",
     quote:
-      "Got 86% in 12th but no JEE rank worth a private college in India. Al-Tayyab walked me through CSE admission at North South — fees were ₹14L total, paid the university account directly. On campus since 2024.",
+      "Al-Tayyab connected me directly with the admissions office in Dhaka. Fees went straight to the college account — no middleman. My family was nervous but everything happened exactly as they said.",
   },
   {
-    name: "Arif Mir",
-    location: "Baramulla → AUST (Civil Engineering)",
+    name: "Bilal Wani",
+    location: "Baramulla → TMSS Medical College (MBBS)",
     quote:
-      "Walked into the Lal Chowk office. They didn't push any college — they gave me phone numbers of 3 colleges in Dhaka and told me to verify myself. Felt honest. Joined AUST last year.",
+      "They shared WhatsApp numbers of 3 Kashmiri students already studying in Bangladesh. After talking to them, we were confident. Best decision for my MBBS.",
   },
 ] as const;
 
@@ -248,12 +189,12 @@ export const faqs = [
     a: "No. Al-Tayyab does not charge students. Our consultation is free. The full college fee is paid by you directly to the college's official bank account — you get an official college receipt. We are paid a referral by the college, not by you.",
   },
   {
-    q: "Are these MBBS/Engineering degrees valid in India?",
-    a: "Yes. MBBS colleges we work with are BMDC + NMC listed — you clear FMGE/NEXT to practise in India. Engineering colleges are BAETE accredited and recognised in India via the AICTE-equivalent route.",
+    q: "Is the MBBS degree valid in India?",
+    a: "Yes. MBBS colleges we work with are BMDC-approved and NMC-listed. After completing your degree, you clear the FMGE/NEXT exam to practise medicine in India. This is the standard route for all foreign MBBS graduates.",
   },
   {
     q: "What's the total cost?",
-    a: "Engineering: ₹8–14 L for the entire 4-year program. MBBS: ₹25–35 L for 5 years + internship. Living costs (hostel + food) add ~₹4–6 K per month in Dhaka.",
+    a: "MBBS: ₹25–35 L for the full 5-year program + 1-year internship. Living costs (hostel + food) add approximately ₹4–6 K per month in Dhaka. No agent fees — you pay only the college.",
   },
   {
     q: "Can I directly talk to the college before deciding?",
@@ -264,11 +205,11 @@ export const faqs = [
     a: "We've been sending students from Kashmir for 9+ years. Large Kashmiri/Indian student community in Dhaka, 24×7 campus security, prayer rooms, halal mess. Past students are reachable on WhatsApp for reference — we'll share their numbers.",
   },
   {
-    q: "What if I'm not sure between MBBS and Engineering?",
-    a: "Walk into the Srinagar office, or send your 12th marksheet + NEET/JEE results on WhatsApp. We'll show you both options with real fees and seat status, and you decide.",
+    q: "What if I didn't qualify NEET this year?",
+    a: "You need a valid NEET score for MBBS in Bangladesh. If you missed the cutoff this year, walk into the Srinagar office or WhatsApp us — we can guide you on the minimum score required and when the next application window opens.",
   },
   {
     q: "Can I take an education loan from a J&K bank?",
-    a: "Yes — JKB, SBI, BoB and other major banks fund both MBBS and engineering in Bangladesh. We help with the documentation. The bank disburses directly to the college account.",
+    a: "Yes — JKB, SBI, BoB and other major banks fund MBBS in Bangladesh. We help with the documentation. The bank disburses directly to the college account.",
   },
 ] as const;
