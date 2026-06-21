@@ -47,10 +47,11 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={site.contact.phoneHref}
-            className="hidden items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground sm:inline-flex"
+            aria-label={`Call ${site.contact.phone}`}
+            className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground"
           >
-            <Phone className="h-3.5 w-3.5" />
-            {site.contact.phone}
+            <Phone className="h-4 w-4 shrink-0" />
+            <span className="hidden sm:inline">{site.contact.phone}</span>
           </a>
           <ButtonLink href="/#apply-form" size="sm" className="rounded-full">
             Apply now
