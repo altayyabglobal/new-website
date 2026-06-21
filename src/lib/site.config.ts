@@ -13,7 +13,7 @@ export const site = {
     whatsapp: "+91 99068 10028",
     whatsappNumber: "919906810028",
     email: "admissions@altayyabglobalconsultants.com",
-    address: "4G Spot Bagh-I-Nund Singh Chattabal, opposite Tatoo Ground, near Petrol Pump, Srinagar, Jammu and Kashmir 190009",
+    address: "4th Floor, 4G Spot Complex, Opposite Tattoo Ground, Batamallo, Srinagar, Jammu and Kashmir 190009",
   },
   hours: "Mon–Sat · 10:00 AM – 7:30 PM",
   countryFocus: "Bangladesh",

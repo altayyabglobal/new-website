@@ -29,7 +29,7 @@ export function JsonLd() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "4G Spot Bagh-I-Nund Singh Chattabal, opposite Tatoo Ground, near Petrol Pump",
+      streetAddress: "4th Floor, 4G Spot Complex, Opposite Tattoo Ground, Batamallo",
       addressLocality: "Srinagar",
       addressRegion: "Jammu and Kashmir",
       postalCode: "190009",
