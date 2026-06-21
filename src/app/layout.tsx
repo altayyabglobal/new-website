@@ -30,20 +30,11 @@ export const metadata: Metadata = {
     description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,
     type: "website",
     url: `https://www.${site.domain}`,
-    images: [
-      {
-        url: "/logo.png",
-        width: 600,
-        height: 200,
-        alt: site.name,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `Al-Tayyab Consultants — MBBS in Bangladesh from Kashmir`,
     description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,
-    images: ["/logo.png"],
   },
 };
 

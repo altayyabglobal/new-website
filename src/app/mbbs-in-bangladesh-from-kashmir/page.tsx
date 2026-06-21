@@ -61,6 +61,15 @@ const collegeData = [
   { name: "Shahabuddin Medical College", seats: "90 seats", fees: "₹30–34 L", badge: "Strong NEXT/FMGE results", highlight: "Consistent FMGE pass rates cited by graduates" },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `https://www.${site.domain}` },
+    { "@type": "ListItem", position: 2, name: "MBBS in Bangladesh from Kashmir", item: `https://www.${site.domain}/mbbs-in-bangladesh-from-kashmir` },
+  ],
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -92,6 +101,7 @@ const jsonLd = {
 export default function MbbsBangladeshPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -17,7 +17,7 @@ export function JsonLd() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-98583-99483",
+      telephone: "+91-88035-12375",
       contactType: "admissions",
       availableLanguage: ["English", "Urdu", "Kashmiri"],
       hoursAvailable: {

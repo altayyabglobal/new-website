@@ -42,6 +42,7 @@ export const trustPillars = [
 ] as const;
 
 export const stats = [
+  { label: "Students placed", value: "650+" },
   { label: "Govt colleges (BD)", value: "10+" },
   { label: "Private colleges (BD)", value: "25+" },
   { label: "Direct-to-college payments", value: "100%" },
