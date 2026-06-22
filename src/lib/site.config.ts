@@ -12,7 +12,7 @@ export const site = {
     phone2Href: "tel:+919906810028",
     whatsapp: "+91 99068 10028",
     whatsappNumber: "919906810028",
-    email: "admissions@altayyabglobalconsultants.com",
+    email: "altayyabglobal@gmail.com",
     address: "4th Floor, 4G Spot Complex, Opposite Tattoo Ground, Batamallo, Srinagar, Jammu and Kashmir 190009",
   },
   hours: "Mon–Sat · 10:00 AM – 7:30 PM",
