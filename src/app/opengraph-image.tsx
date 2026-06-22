@@ -89,7 +89,6 @@ export default function OGImage() {
           >
             {[
               { value: "₹30–35 L", label: "Total MBBS cost" },
-              { value: "650+", label: "Students placed" },
               { value: "19", label: "BMDC colleges" },
               { value: "100%", label: "Direct payments" },
             ].map((s) => (

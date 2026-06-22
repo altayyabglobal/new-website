@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MBBS in Bangladesh from Kashmir — Complete Guide 2026",
     description:
-      "NMC-approved MBBS in Bangladesh for Kashmiri students. Total cost ₹30–35 L. Direct college payment. 650+ students placed.",
+      "NMC-approved MBBS in Bangladesh for Kashmiri students. Total cost ₹30–35 L. Direct college payment. No agent fees.",
     url: `https://www.${site.domain}/mbbs-in-bangladesh-from-kashmir`,
   },
 };

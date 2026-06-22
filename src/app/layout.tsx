@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: `Al-Tayyab Consultants — MBBS in Bangladesh from Kashmir`,
-  description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,
+  description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — you pay the college directly, never us.`,
   metadataBase: new URL(`https://www.${site.domain}`),
   alternates: {
     canonical: `https://www.${site.domain}`,
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Al-Tayyab Consultants — MBBS in Bangladesh from Kashmir`,
-    description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,
+    description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — you pay the college directly, never us.`,
     type: "website",
     url: `https://www.${site.domain}`,
   },
   twitter: {
     card: "summary_large_image",
     title: `Al-Tayyab Consultants — MBBS in Bangladesh from Kashmir`,
-    description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. 650+ students placed. Free consultation — you pay the college directly, never us.`,
+    description: `Al-Tayyab guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — you pay the college directly, never us.`,
   },
 };
 
