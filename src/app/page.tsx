@@ -8,6 +8,7 @@ import { Process } from "@/components/site/Process";
 import { Testimonials } from "@/components/site/Testimonials";
 import { FAQ } from "@/components/site/FAQ";
 import { ApplySection } from "@/components/site/ApplySection";
+import { ContactSection } from "@/components/site/ContactSection";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -27,6 +28,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         <FAQ />
         <ApplySection />
+        <ContactSection />
       </main>
       <Footer />
       <WhatsAppFab />

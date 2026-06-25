@@ -44,6 +44,11 @@ export function Footer() {
               </a>
             </li>
             <li>
+              <a href="#contact" className="hover:text-foreground">
+                Contact us
+              </a>
+            </li>
+            <li>
               <a href="/mbbs-colleges-in-bangladesh" className="hover:text-foreground">
                 All MBBS colleges &amp; fees
               </a>
