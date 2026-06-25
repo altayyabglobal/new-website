@@ -11,6 +11,7 @@ const nav = [
   { href: "/#why", label: "Why Bangladesh" },
   { href: "/#process", label: "Process" },
   { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Reach us" },
 ];
 
 export function Header() {
