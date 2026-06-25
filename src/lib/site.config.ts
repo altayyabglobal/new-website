@@ -20,8 +20,8 @@ export const site = {
   audience: "Kashmiri students",
   homeRegion: "Kashmir",
   social: {
-    instagram: "#",
-    facebook: "#",
+    instagram: "https://www.instagram.com/altayyabglobal/",
+    facebook: "https://www.facebook.com/altayyabglobal/",
     youtube: "#",
   },
 } as const;

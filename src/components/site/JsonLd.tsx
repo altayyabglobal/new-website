@@ -56,6 +56,8 @@ export function JsonLd() {
     ],
     sameAs: [
       `https://wa.me/${site.contact.whatsappNumber}`,
+      site.social.facebook,
+      site.social.instagram,
     ],
   };
 
