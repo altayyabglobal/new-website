@@ -96,26 +96,24 @@ export function ContactSection() {
           </div>
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-4">
+        <div className="mt-6 flex items-center justify-center gap-3">
           <a
             href={site.social.facebook}
             target="_blank"
             rel="noreferrer"
             aria-label="Facebook"
-            className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-brand/40 hover:bg-brand-soft hover:text-foreground"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand transition-colors hover:bg-brand hover:text-white"
           >
             <FacebookIcon />
-            Facebook
           </a>
           <a
             href={site.social.instagram}
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground transition-colors hover:border-brand/40 hover:bg-brand-soft hover:text-foreground"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-brand/10 text-brand transition-colors hover:bg-brand hover:text-white"
           >
             <InstagramIcon />
-            Instagram
           </a>
         </div>
       </div>
