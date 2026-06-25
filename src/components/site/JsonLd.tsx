@@ -58,6 +58,7 @@ export function JsonLd() {
       `https://wa.me/${site.contact.whatsappNumber}`,
       site.social.facebook,
       site.social.instagram,
+      site.social.youtube,
     ],
   };
 

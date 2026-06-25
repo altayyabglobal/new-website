@@ -22,7 +22,7 @@ export const site = {
   social: {
     instagram: "https://www.instagram.com/altayyabglobal/",
     facebook: "https://www.facebook.com/altayyabglobal/",
-    youtube: "#",
+    youtube: "https://www.youtube.com/@altayyabglobal",
   },
 } as const;
 
