@@ -1,10 +1,12 @@
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { StatsBand } from "@/components/site/StatsBand";
+import { AboutSection } from "@/components/site/AboutSection";
 import { TrustPillars } from "@/components/site/TrustPillars";
+import { ServicesSection } from "@/components/site/ServicesSection";
 import { WhyBangladesh } from "@/components/site/WhyBangladesh";
 import { Programs } from "@/components/site/Programs";
-import { Process } from "@/components/site/Process";
+import { EligibilitySection } from "@/components/site/EligibilitySection";
 import { Testimonials } from "@/components/site/Testimonials";
 import { FAQ } from "@/components/site/FAQ";
 import { ApplySection } from "@/components/site/ApplySection";
@@ -21,10 +23,12 @@ export default function Home() {
       <main>
         <Hero />
         <StatsBand />
+        <AboutSection />
         <TrustPillars />
+        <ServicesSection />
+        <EligibilitySection />
         <Programs />
         <WhyBangladesh />
-        <Process />
         {/* <Testimonials /> */}
         <FAQ />
         <ApplySection />

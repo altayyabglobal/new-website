@@ -1,7 +1,7 @@
 export const site = {
   name: "Al-Tayyab Global Consultants",
   shortName: "Al-Tayyab",
-  tagline: "Kashmir's most trusted MBBS consultancy for Bangladesh.",
+  tagline: "Clear Guidance, Guaranteed Admission — Your Trusted Partner for MBBS in Bangladesh.",
   domain: "altayyabglobalconsultants.com",
   description:
     "Al-Tayyab Global Consultants guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — your fees go directly to the college.",
@@ -220,14 +220,56 @@ export const mbbsColleges = [
   },
 ] as const;
 
+export const eligibility = [
+  "Must have qualified the NEET-UG exam as mandated by the National Medical Commission (NMC).",
+  "Minimum aggregate percentage in PCB (Physics, Chemistry, Biology) in 10+2 standard according to the latest DGHS Bangladesh directives.",
+  "A minimal gap year margin as defined by university admission frameworks.",
+] as const;
+
+export const mission =
+  "To make quality medical education accessible through transparent, ethical, and student-focused counselling. We empower aspiring doctors to achieve their goals by connecting them with recognised medical universities in Bangladesh.";
+
+export const services = [
+  {
+    number: "01",
+    title: "University Selection",
+    body: "Personalised guidance matching your budget, preferences, and academic profile with top-tier BMDC-approved medical universities in Bangladesh.",
+  },
+  {
+    number: "02",
+    title: "Application Processing",
+    body: "Flawless management of your application lifecycle, ensuring compliance with university deadlines and seat reservation requirements.",
+  },
+  {
+    number: "03",
+    title: "Documentation & Legalization",
+    body: "Verification, translation, and authentication of certificates, mark sheets, and medical eligibility documents.",
+  },
+  {
+    number: "04",
+    title: "Visa Assistance",
+    body: "Complete support through documentation preparation, visa filing, and direct coordination with the Bangladesh embassy.",
+  },
+  {
+    number: "05",
+    title: "Travel & On-Arrival Support",
+    body: "Group ticketing, organised departures, safe transit plans, and accompanied arrivals to your campus accommodation.",
+  },
+  {
+    number: "06",
+    title: "Post-Admission Services",
+    body: "Continuous local support during your initial settlement — hostel registration, local compliance, and parent coordination.",
+  },
+] as const;
+
 export const whyBangladesh = [
   {
     title: "Cost: ₹30–35 L total",
     body: "MBBS from ₹30 L — a fraction of Indian private/management quota. Quality BMDC-approved education without the financial burden.",
   },
   {
-    title: "Degree valid in India",
-    body: "MBBS via FMGE/NEXT. Your degree is NMC-listed — the recognised path to practise medicine in India. A well-trodden route taken by thousands of Indian graduates.",
+    title: "Globally recognised degree",
+    body: "MBBS via FMGE/NEXT. Colleges are NMC-listed and WHO-recognised — the standard path to practise medicine in India and internationally. Thousands of Indian graduates have cleared this route.",
   },
   {
     title: "Close to Kashmir",

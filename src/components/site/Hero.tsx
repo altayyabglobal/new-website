@@ -18,7 +18,11 @@ export function Hero() {
             From {site.homeRegion} · For {site.audience}
           </span>
 
-          <h1 className="heading-1 mt-5">
+          <p className="mt-3 text-sm font-medium text-muted-foreground">
+            {site.tagline}
+          </p>
+
+          <h1 className="heading-1 mt-4">
             <span className="text-brand">MBBS in Bangladesh</span> direct from Kashmir.
           </h1>
 

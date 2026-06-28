@@ -20,7 +20,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><a href="#why" className="hover:text-foreground">Why Bangladesh</a></li>
             <li><a href="#programs" className="hover:text-foreground">MBBS colleges</a></li>
-            <li><a href="#process" className="hover:text-foreground">Admission process</a></li>
+            <li><a href="#services" className="hover:text-foreground">Our services</a></li>
             <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
             <li><a href="#apply" className="hover:text-foreground">Apply now</a></li>
             <li><a href="#contact" className="hover:text-foreground">Contact us</a></li>
