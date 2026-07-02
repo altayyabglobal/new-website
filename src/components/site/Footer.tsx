@@ -74,7 +74,10 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="container-wide flex flex-col items-center justify-between gap-3 py-5 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
+            © {new Date().getFullYear()} {site.name}. All rights reserved. ·{" "}
+            <a href="/privacy-policy" className="hover:text-foreground">
+              Privacy Policy
+            </a>
           </p>
           <div className="flex items-center gap-3">
             <a
