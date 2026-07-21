@@ -6,12 +6,12 @@ export const site = {
   description:
     "Al-Tayyab Global Consultants guides Kashmiri students into BMDC/NMC-approved MBBS colleges in Bangladesh. Free consultation — your fees go directly to the college.",
   contact: {
-    phone: "+91 88035 12375",
-    phoneHref: "tel:+918803512375",
-    phone2: "+91 99068 10028",
-    phone2Href: "tel:+919906810028",
-    whatsapp: "+91 99068 10028",
-    whatsappNumber: "919906810028",
+    phone: "+91 93208 38585",
+    phoneHref: "tel:+919320838585",
+    phone2: "+91 93208 38586",
+    phone2Href: "tel:+919320838586",
+    whatsapp: "+91 93208 38585",
+    whatsappNumber: "919320838585",
     email: "info@altayyabglobalconsultants.com",
     email2: "altayyabglobal@gmail.com",
     address: "4th Floor, 4G Spot Complex, Opposite Tattoo Ground, Batamallo, Srinagar, Jammu and Kashmir 190009",
