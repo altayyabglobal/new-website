@@ -55,7 +55,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster richColors position="top-center" />
-        <Script id="meta-pixel" strategy="beforeInteractive">
+        <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
