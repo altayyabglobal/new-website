@@ -48,7 +48,7 @@ export function LeadForm() {
       setSubmitted(true);
       reset();
       if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-        (window as any).fbq("track", "Lead");
+        (window as any).fbq("trackCustom", "Form Submitted");
       }
 
       const lines = [
@@ -156,7 +156,7 @@ export function LeadForm() {
             className="w-full rounded-full border-2 border-success/40 bg-success/10 py-3 text-base font-semibold text-success hover:bg-success/20 hover:text-success"
             onClick={() => {
               if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-                (window as any).fbq("track", "Lead");
+                (window as any).fbq("trackCustom", "Form Submitted");
               }
             }}
           >
