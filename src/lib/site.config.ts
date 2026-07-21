@@ -24,6 +24,7 @@ export const site = {
     instagram: "https://www.instagram.com/altayyabglobal/",
     facebook: "https://www.facebook.com/altayyabglobal/",
     youtube: "https://www.youtube.com/@altayyabglobal",
+    linkedin: "https://www.linkedin.com/company/al-tayyab-global-consultants/",
   },
 } as const;
 
