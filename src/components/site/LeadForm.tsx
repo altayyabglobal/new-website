@@ -47,6 +47,9 @@ export function LeadForm() {
       }
       setSubmitted(true);
       reset();
+      if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+        (window as any).fbq("track", "Lead");
+      }
 
       const lines = [
         `Hi, I'm ${data.name} from ${data.city || "Kashmir"}.`,
