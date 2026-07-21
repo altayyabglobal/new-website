@@ -35,7 +35,7 @@ export function Header() {
     >
       <div className="container-wide flex h-16 items-center justify-between">
         <Logo />
-        <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
+        <nav className="hidden items-center gap-4 text-sm font-medium text-muted-foreground md:flex">
           {nav.map((n) => (
             <a
               key={n.href}
@@ -46,7 +46,7 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <a
             href={site.social.facebook}
             target="_blank"
@@ -83,7 +83,7 @@ export function Header() {
           <a
             href={`mailto:${site.contact.email}`}
             aria-label={`Email ${site.contact.email}`}
-            className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground"
+            className="inline-flex items-center gap-1.5 rounded-full px-2 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground"
           >
             <Mail className="h-4 w-4 shrink-0" />
             <span className="hidden md:inline">{site.contact.email}</span>
@@ -91,7 +91,7 @@ export function Header() {
           <a
             href={site.contact.phoneHref}
             aria-label={`Call ${site.contact.phone}`}
-            className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground"
+            className="inline-flex items-center gap-1.5 rounded-full px-2 py-1.5 text-sm font-medium text-foreground/80 hover:text-foreground"
           >
             <Phone className="h-4 w-4 shrink-0" />
             <span className="hidden sm:inline">{site.contact.phone}</span>
