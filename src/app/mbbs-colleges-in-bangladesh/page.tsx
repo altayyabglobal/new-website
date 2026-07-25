@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MBBS Colleges in Bangladesh 2026 — Fees & Hostel Charges",
     description:
-      "19 BMDC-approved colleges. Official fees (Session 2026–27) at $1 = ₹94.33. Hostel info included. Direct admission for Kashmiri students.",
+      "27 BMDC-approved colleges. Official fees (Session 2026–27) at $1 = ₹94.33. Hostel info included. Direct admission for Kashmiri students.",
     url: `https://www.${site.domain}/mbbs-colleges-in-bangladesh`,
   },
 };

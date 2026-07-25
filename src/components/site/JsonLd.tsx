@@ -24,7 +24,7 @@ export function JsonLd() {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         opens: "10:00",
-        closes: "19:30",
+        closes: "18:00",
       },
     },
     address: {
@@ -44,7 +44,7 @@ export function JsonLd() {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       opens: "10:00",
-      closes: "19:30",
+      closes: "18:00",
     },
     knowsAbout: [
       "MBBS in Bangladesh",

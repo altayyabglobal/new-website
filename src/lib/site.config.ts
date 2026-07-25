@@ -16,7 +16,7 @@ export const site = {
     email2: "altayyabglobal@gmail.com",
     address: "4th Floor, 4G Spot Complex, Opposite Tattoo Ground, Batamallo, Srinagar, Jammu and Kashmir 190009",
   },
-  hours: "Mon–Sat · 10:00 AM – 7:30 PM",
+  hours: "Mon–Sat · 10:00 AM – 6:00 PM",
   countryFocus: "Bangladesh",
   audience: "Kashmiri students",
   homeRegion: "Kashmir",
@@ -220,6 +220,70 @@ export const mbbsColleges = [
     hostel: "Included (food + accommodation)",
     badge: "All-inclusive",
   },
+  {
+    name: "Universal Medical College",
+    city: "Gazipur",
+    feesUSD: "$41,000",
+    feesINR: "₹38–39 L",
+    hostel: "$70/mo (not included)",
+    badge: "Budget pick",
+  },
+  {
+    name: "Green Life Medical College",
+    city: "Dhanmondi, Dhaka",
+    feesUSD: "$42,000",
+    feesINR: "₹39–40 L",
+    hostel: "BDT 8,000/mo (not included)",
+    badge: "Reputed · Dhaka",
+  },
+  {
+    name: "East West Medical College",
+    city: "Turag, Dhaka",
+    feesUSD: "$47,000",
+    feesINR: "₹44–45 L",
+    hostel: "Included",
+    badge: "Hostel included",
+  },
+  {
+    name: "Jahurul Islam Medical College",
+    city: "Bajitpur, Kishoreganj",
+    feesUSD: "$45,000",
+    feesINR: "₹42–43 L",
+    hostel: "Included",
+    badge: "Hostel included",
+  },
+  {
+    name: "Enam Medical College",
+    city: "Savar, Dhaka",
+    feesUSD: "$45,000",
+    feesINR: "₹42–43 L",
+    hostel: "$70/mo (not included)",
+    badge: "Near Dhaka",
+  },
+  {
+    name: "Holy Family Red Crescent Medical College",
+    city: "Eskaton, Dhaka",
+    feesUSD: "$48,250",
+    feesINR: "₹45–46 L",
+    hostel: "BDT 3,500–10,000/mo (not included)",
+    badge: "Central Dhaka",
+  },
+  {
+    name: "Bangladesh Medical College",
+    city: "Dhanmondi, Dhaka",
+    feesUSD: "$49,000",
+    feesINR: "₹46–47 L",
+    hostel: "Not included (contact college)",
+    badge: "Estd. 1986 · Dhaka",
+  },
+  {
+    name: "Chattogram Maa-O-Shishu Hospital Medical College",
+    city: "Agrabad, Chattogram",
+    feesUSD: "$45,000",
+    feesINR: "₹42–43 L",
+    hostel: "Included ($2,500 for 5 yrs)",
+    badge: "Chattogram campus",
+  },
 ] as const;
 
 export const eligibility = [
@@ -363,5 +427,29 @@ export const faqs = [
   {
     q: "Can I take an education loan from a J&K bank?",
     a: "Yes — JKB, SBI, BoB and other major banks fund MBBS in Bangladesh. We help with the documentation. The bank disburses directly to the college account.",
+  },
+  {
+    q: "What is the National Exit Test (NEXT)?",
+    a: "NEXT is the licensing exam framework announced by India's National Medical Commission (NMC) for all MBBS graduates, including those from foreign colleges. Rules are still being rolled out — we track the latest NMC notifications and guide you through whichever exam (FMGE or NEXT) applies when you graduate.",
+  },
+  {
+    q: "How many times can I appear for FMGE/NEXT?",
+    a: "The number of attempts allowed is set by the NMC and can change with each notification. We share the current FMGE/NEXT eligibility rules with our students as they approach graduation, so you're not caught off guard.",
+  },
+  {
+    q: "Am I eligible for government jobs in India after MBBS in Bangladesh?",
+    a: "Yes. Once you clear FMGE/NEXT and complete NMC registration, you're eligible to apply for government medical posts in India like any other NMC-registered doctor, subject to the recruiting authority's usual eligibility criteria.",
+  },
+  {
+    q: "Can I pursue MD/MS or postgraduate studies in India after this?",
+    a: "Yes. After NMC registration and meeting the applicable eligibility requirements, MBBS Bangladesh graduates can apply for MD/MS and other postgraduate programs in India under the prevailing admission regulations.",
+  },
+  {
+    q: "Can I practice medicine outside India — USA, UK, Gulf, etc.?",
+    a: "Yes. Graduates of BMDC-approved, NMC-listed colleges can appear for the relevant licensing exams — USMLE (USA), PLAB (UK), AMC (Australia), DHA/HAAD/MOH/Prometric (Gulf), and equivalents for Canada and New Zealand — subject to each country's own eligibility rules.",
+  },
+  {
+    q: "Why choose Al-Tayyab Global Consultants?",
+    a: "9+ years placing Kashmiri students directly with Dhaka admission offices, zero consultancy fees, and no middleman handling your money. We give you the college's own contact so you can verify everything yourself before you commit.",
   },
 ] as const;

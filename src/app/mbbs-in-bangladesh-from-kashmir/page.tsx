@@ -354,7 +354,7 @@ export default function MbbsBangladeshPage() {
                 </Link>
               </div>
               <p className="mt-5 text-xs text-muted-foreground">
-                Free consultation · Mon–Sat 10 AM–7:30 PM · Reply within 1 hour · Srinagar office
+                Free consultation · Mon–Sat 10 AM–6 PM · Reply within 1 hour · Srinagar office
               </p>
             </div>
           </div>
