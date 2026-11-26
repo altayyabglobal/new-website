@@ -1,6 +1,6 @@
-import { ArrowRight, ShieldCheck, HandCoins } from "lucide-react";
+import { ArrowRight, ShieldCheck, HandCoins, FileText, Download, ArrowUpRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
-import { site } from "@/lib/site.config";
+import { site, admissionCircular } from "@/lib/site.config";
 import { waLink } from "@/lib/whatsapp";
 import { LeadForm } from "./LeadForm";
 import styles from "./Hero.module.css";
@@ -59,6 +59,44 @@ export function Hero() {
               <ShieldCheck className="h-4 w-4 text-brand" /> BMDC + NMC approved colleges
             </li>
           </ul>
+
+          <div className="mt-8 max-w-xl">
+            <a
+              href={admissionCircular.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View or download MBBS/BDS Admission Circular 2026-27 (PDF)"
+              className="group relative flex items-center justify-between gap-4 rounded-2xl border border-brand/25 bg-card/90 p-4 shadow-sm backdrop-blur transition-all duration-200 hover:border-brand/60 hover:bg-card hover:shadow-md hover:shadow-brand/5"
+            >
+              <div className="flex items-center gap-3.5 min-w-0">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand ring-1 ring-brand/20 transition-colors group-hover:bg-brand group-hover:text-brand-foreground">
+                  <FileText className="h-5 w-5" />
+                </div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="inline-flex items-center rounded-full bg-accent-gold/25 px-2 py-0.5 text-[11px] font-semibold text-amber-900 dark:text-amber-200">
+                      Official Circular
+                    </span>
+                    <span className="text-xs text-muted-foreground font-medium">
+                      Session {admissionCircular.session}
+                    </span>
+                  </div>
+                  <p className="mt-1 font-semibold text-foreground group-hover:text-brand transition-colors text-sm sm:text-base">
+                    {admissionCircular.title}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    DGME Bangladesh official notice · PDF ({admissionCircular.fileSize})
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex shrink-0 items-center gap-1.5 rounded-full border border-border/80 bg-muted/60 px-3 py-1.5 text-xs font-semibold text-foreground transition-all group-hover:border-brand group-hover:bg-brand group-hover:text-brand-foreground">
+                <Download className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">Download</span>
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </div>
+            </a>
+          </div>
         </div>
 
         <div id="apply-form" className="lg:col-span-6 scroll-mt-20">

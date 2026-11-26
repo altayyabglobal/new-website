@@ -26,6 +26,7 @@ export function Footer() {
             <li><a href="#contact" className="hover:text-foreground">Contact us</a></li>
             <li><a href="/mbbs-colleges-in-bangladesh" className="hover:text-foreground">All colleges &amp; fees</a></li>
             <li><a href="/mbbs-in-bangladesh-from-kashmir" className="hover:text-foreground">MBBS guide</a></li>
+            <li><a href="/notice_2026-27_fedd276-df30-4e71-8dbe-d8487d8f2bf8.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-foreground text-brand">MBBS/BDS Circular 2026–27</a></li>
           </ul>
         </div>
 
