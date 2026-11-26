@@ -453,3 +453,14 @@ export const faqs = [
     a: "9+ years placing Kashmiri students directly with Dhaka admission offices, zero consultancy fees, and no middleman handling your money. We give you the college's own contact so you can verify everything yourself before you commit.",
   },
 ] as const;
+
+export const admissionCircular = {
+  title: "MBBS/BDS Admission Circular 2026-27",
+  href: "/notice_2026-27_fedd276-df30-4e71-8dbe-d8487d8f2bf8.pdf",
+  fileName: "notice_2026-27_fedd276-df30-4e71-8dbe-d8487d8f2bf8.pdf",
+  fileSize: "540 KB",
+  session: "2026–27",
+  authority: "DGME, Bangladesh",
+  description:
+    "Official admission notice for foreign students for MBBS/BDS courses in Bangladesh medical colleges.",
+} as const;
